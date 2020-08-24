@@ -1,0 +1,562 @@
+
+
+body {
+  background: #F5F5F8;
+}
+
+path.state {
+  cursor: pointer;
+}
+
+h2.metrics-section-title {
+  font-size: 2.5rem;
+  letter-spacing: -.2px;
+  line-height: 2.5rem;
+  margin-bottom: 10px;
+  color: #343F49;
+}
+
+.metrics-wrap {
+  background: #F5F5F8;
+  padding: 115px 15px 120px 15px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.metrics-filter-instructions {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.metrics-content-wrap::after,
+.metrics-content-wrap .downstream-growth::after,
+.metrics-content-wrap .upstream-growth::after,
+.metrics-content-wrap .performance .bars::after,
+.metrics-content-wrap .performance .figures-legend .legend-row::after,
+.metrics-content-wrap .isp-operators #isp-operator-names::after,
+#broadband-metrics-small-states .small-state::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.metrics-content-wrap {
+  position: relative;
+}
+
+.metrics-content-wrap .data-col {
+  width: 330px;
+  margin-right: 70px;
+  float: left;
+}
+
+.metrics-content-wrap #broadband-metrics-map {
+  width: 740px;
+  float: left;
+  margin-top: 40px;
+}
+
+.metrics-content-wrap .state-filter {
+  margin-bottom: 20px;
+}
+
+.metrics-content-wrap .downstream-growth,
+.metrics-content-wrap .upstream-growth,
+.metrics-content-wrap .performance {
+  margin-bottom: 20px;
+}
+
+.metrics-content-wrap .downstream-growth .overall,
+.metrics-content-wrap .upstream-growth .overall {
+  margin-right: 2%;
+}
+
+.metrics-content-wrap .downstream-growth .overall,
+.metrics-content-wrap .upstream-growth .overall,
+.metrics-content-wrap .downstream-growth .past-week,
+.metrics-content-wrap .upstream-growth .past-week {
+  float: left;
+  /*width: 50%;*/
+  width: 49%;
+}
+
+.metrics-content-wrap .downstream-growth-title,
+.metrics-content-wrap .upstream-growth-title,
+.metrics-content-wrap .performance-title,
+.metrics-content-wrap .isp-title {
+  color: #343F49;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #343F49;
+}
+
+.metrics-content-wrap .downstream-growth-title .small,
+.metrics-content-wrap .upstream-growth-title .small,
+.metrics-content-wrap .performance-title .small {
+  font-size: 1rem;
+}
+
+.metrics-content-wrap .downstream-growth .figure .num,
+.metrics-content-wrap .upstream-growth .figure .num {
+  /*font-size: 2.5rem;
+  line-height: 2rem;
+  font-weight: bold;*/
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  letter-spacing: -0.0125rem;
+}
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  .metrics-content-wrap .downstream-growth .figure .num,
+  .metrics-content-wrap .upstream-growth .figure .num {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+  }
+}
+
+.metrics-content-wrap .downstream-growth .figure .percent,
+.metrics-content-wrap .upstream-growth .figure .percent {
+  vertical-align: top;
+  /*font-size: 1.25rem;*/
+  font-weight: bold;
+  letter-spacing: -0.0125rem;
+  font-size: 1rem;
+}
+
+.metrics-content-wrap .data-col .overall .figure {
+  color: #8c489a;
+  float: left;
+  margin-right: 10px;
+}
+
+.metrics-content-wrap .data-col .past-week .figure {
+  color: #5ac9e7;
+  float: left;
+  margin-right: 10px;
+}
+
+.metrics-content-wrap .data-col .overall .metric-label,
+.metrics-content-wrap .data-col .past-week .metric-label  {
+  text-transform: uppercase;
+  color: #343F49;
+  font-size: 0.9rem !important;
+  line-height: 1.1rem !important;
+}
+
+.metrics-content-wrap .performance .bars {
+  height: 35px;
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+.metrics-content-wrap .performance .bars .bar {
+  height: 35px;
+  float: left;
+}
+
+.metrics-content-wrap .performance .bars #bar-normal {
+  background: #00AC92;
+}
+
+.metrics-content-wrap .performance .bars #bar-elevated {
+  background: #FED241;
+}
+
+.metrics-content-wrap .performance .bars #bar-substantially-elevated {
+  background: #ed6660;
+}
+
+.metrics-content-wrap .performance .bars #bar-severely-elevated {
+  background: #e71b4f;
+}
+
+.metrics-content-wrap .performance .figures-legend .legend-row {
+  margin-bottom: 10px;
+  line-height: 1.1rem;
+}
+
+.metrics-content-wrap .performance .figures-legend .figure,
+.metrics-content-wrap .performance .figures-legend .legend-label {
+  font-size: 1rem !important;
+}
+
+.metrics-content-wrap .performance .figures-legend .figure,
+.metrics-content-wrap .performance .figures-legend .key,
+.metrics-content-wrap .performance .figures-legend .legend-label {
+  float: left;
+  margin-right: 8px;
+}
+
+.metrics-content-wrap .performance .figures-legend .figure {
+  font-weight: bold;
+  width: 35px;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.metrics-content-wrap .performance .figures-legend .key {
+  width: 15px;
+  height: 15px;
+}
+
+.metrics-content-wrap .performance .figures-legend .key.green {
+  background: #00AC92;
+}
+
+.metrics-content-wrap .performance .figures-legend .key.yellow {
+  background: #FED241;
+}
+
+.metrics-content-wrap .performance .figures-legend .key.orange {
+  background: #ed6660;
+}
+
+.metrics-content-wrap .performance .figures-legend .key.red {
+  background: #e71b4f;
+}
+
+.metrics-content-wrap .isp-operators {
+  min-height: 120px;
+}
+
+.metrics-content-wrap .isp-operators .provider {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 7px;
+}
+
+.metrics-content-wrap .isp-operators .provider a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #343F49;
+  font-size: 1rem !important;
+  line-height: 1.25rem;
+}
+
+.metrics-content-wrap .isp-operators .provider a:hover {
+  border-bottom: 2px solid #343F49;
+}
+
+.metrics-content-wrap #broadband-metrics-small-states {
+  clear: both;
+  position: absolute;
+  right: -15px;
+  width: 60px;
+  bottom: 100px;
+}
+
+.metrics-content-wrap #broadband-metrics-small-states .small-state {
+  margin-bottom: 10px;
+}
+
+.metrics-content-wrap #broadband-metrics-small-states .small-state .box {
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: #343F49;
+  cursor: pointer;
+}
+
+.metrics-content-wrap #broadband-metrics-small-states .small-state .box:hover {
+  background: #8c489a !important;
+}
+
+.metrics-content-wrap #broadband-metrics-small-states .small-state .box-text {
+  font-size: 1.125rem;
+  line-height: 1.35rem;
+}
+
+.metrics-wrap .bottom-notes-sources .notes,
+.metrics-wrap .bottom-notes-sources .sources {
+  padding: 20px 0px;
+  border-bottom: 1px solid #343F49;
+}
+
+.metrics-wrap .bottom-notes-sources .notes .notes-description,
+.metrics-wrap .bottom-notes-sources .sources .sources-description  {
+  display: block;
+}
+
+.metrics-wrap .bottom-notes-sources .notes .notes-title,
+.metrics-wrap .bottom-notes-sources .sources .sources-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem !important;
+  line-height: 1.1rem !important;
+}
+
+.metrics-wrap .bottom-notes-sources .notes .notes-title .arrow,
+.metrics-wrap .bottom-notes-sources .sources .sources-title .arrow {
+  height: 26px;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 20px;
+}
+
+.metrics-wrap .bottom-notes-sources .notes .notes-description div {
+  padding-bottom: 5px;
+  font-size: 1rem !important;
+  line-height: 1.1rem !important;
+}
+
+.metrics-wrap .bottom-notes-sources .sources .sources-description {
+  font-size: 1rem !important;
+  line-height: initial;
+}
+
+.metrics-wrap .bottom-notes-sources .notes .notes-description,
+.metrics-wrap .bottom-notes-sources .sources .sources-description {
+  padding-top: 10px;
+}
+
+.metrics-wrap .bottom-notes-sources .notes .notes-description .green {
+  color: #00AC92;
+}
+
+.metrics-wrap .bottom-notes-sources .notes .notes-description .yellow {
+  color: #FED241;
+}
+
+.metrics-wrap .bottom-notes-sources .notes .notes-description .orange {
+  color: #ed6660;
+}
+
+.metrics-wrap .bottom-notes-sources .notes .notes-description .red {
+  color: #e71b4f;
+}
+
+.metrics-wrap .bottom-notes-sources .notes .notes-title .arrow b,
+.metrics-wrap .bottom-notes-sources .sources .sources-title .arrow b {
+  border-style: initial;
+  border-width: initial;
+  border-color: initial;
+  margin-left: 0;
+  margin-top: 0;
+  left: initial;
+  right: 10px;
+  position: absolute;
+  border-bottom: 3px solid #343F49;
+  border-right: 3px solid #343F49;
+  transform-origin: 66% 66%;
+  transform: rotate(45deg);
+  transition: all .15s ease-in-out;
+  height: 10px;
+  width: 10px;
+}
+
+.metrics-wrap .bottom-notes-sources .notes.active .notes-title .arrow b,
+.metrics-wrap .bottom-notes-sources .sources.active .sources-title .arrow b {
+  transform: rotate(225deg);
+}
+
+
+
+
+.metrics-content-wrap .select2-container--default .select2-selection--single {
+  height: 48px;
+}
+
+.metrics-content-wrap .select2-container--default {
+    width: 100% !important;
+}
+
+.metrics-content-wrap .select2-container--default .select2-selection--single {
+    background-color: #F5F5F8;
+    border: 1px solid #343F49;
+    border-radius: 0;
+    font-size: 1.125rem;
+}
+
+.metrics-content-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 1.5rem;
+}
+
+.metrics-content-wrap .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 26px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 20px;
+}
+
+.metrics-content-wrap .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    height: 12px;
+    top: 50%;
+    width: 12px;
+}
+
+.metrics-content-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #8c489a;
+    padding-top: 8px;
+    padding-left: 25px;
+    padding-right: 40px;
+}
+
+.metrics-content-wrap .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-style: initial;
+    border-width: 0;
+    border-color: initial;
+    margin-left: 0;
+    margin-top: 0;
+    left: auto;
+    right: 25px;
+    position: absolute;
+    border-bottom: 3px solid #8c489a !important;
+    border-right: 3px solid #8c489a !important;
+    transform-origin: 66% 66%;
+    transform: rotate(45deg);
+    transition: all .15s ease-in-out;
+}
+
+.select2-dropdown.select2-dropdown--above .select2-results__option[aria-selected=true], .select2-dropdown.select2-dropdown--below .select2-results__option[aria-selected=true] {
+    font-weight: 700;
+}
+
+.select2-dropdown .select2-results__option[aria-selected=true] {
+    background-color: transparent;
+    color: #A5BBC3;
+    background-image: url(/themes/ncta/images/2F1B0EA4-C37B-4846-B9FB-5327D4CBEE15%403x.png);
+    background-repeat: no-repeat;
+    background-position: 92% 41%;
+    background-size: 14px;
+    padding-right: 25px;
+}
+
+.select2-dropdown .select2-results__option:hover {
+    background-color: #d8d8d8!important;
+    color: #343F49;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #d8d8d8!important;
+    color: #343F49;
+}
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  .metrics-content-wrap .downstream-growth-title .small,
+  .metrics-content-wrap .upstream-growth-title .small,
+  .metrics-content-wrap .performance-title .small {
+    font-size: 0.8rem;
+  }
+}
+@media all and (max-width: 1199px) {
+  .metrics-content-wrap #broadband-metrics-map {
+    width: 614px;
+  }
+  .metrics-content-wrap .data-col {
+    width: 280px;
+    margin-right: 40px;
+  }
+  .metrics-content-wrap #broadband-metrics-small-states {
+    bottom: 160px;
+  }
+  .metrics-content-wrap .performance .figures-legend .legend-label {
+    max-width: 180px;
+  }
+  .metrics-content-wrap .downstream-growth-title,
+  .metrics-content-wrap .upstream-growth-title,
+  .metrics-content-wrap .performance-title,
+  .metrics-content-wrap .isp-title {
+    font-size: 1.35rem;
+  }
+}
+
+@media all and (max-width: 991px) {
+  .metrics-content-wrap .data-col {
+    float: none;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .metrics-content-wrap .data-col::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .metrics-content-wrap #broadband-metrics-map {
+    float: none;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .metrics-content-wrap #broadband-metrics-small-states {
+    position: static;
+    width: auto;
+  }
+  .metrics-content-wrap #broadband-metrics-small-states .small-state {
+    float: left;
+    margin-right: 15px;
+  }
+  .metrics-content-wrap #broadband-metrics-small-states .small-state .box {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .metrics-content-wrap .select2-container--default {
+    max-width: 50%;
+  }
+  .downstream-growth {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+  }
+  .upstream-growth {
+    width: 48%;
+    float: left;
+  }
+  .metrics-content-wrap .performance {
+    clear: left;
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+  }
+  .metrics-content-wrap .isp-operators {
+    float: left;
+    width: 48%;
+  }
+}
+@media all and (max-width: 767px) {
+  .metrics-content-wrap #broadband-metrics-map {
+    margin-top: 0;
+  }
+  .metrics-content-wrap .select2-container--default {
+    max-width: 100%;
+  }
+  .downstream-growth {
+    width: 100%;
+    max-width: 400px;
+    float: none;
+    margin: 0 auto 30px auto;
+  }
+  .upstream-growth {
+    width: 100%;
+    max-width: 400px;
+    float: none;
+    margin: 0 auto 30px auto;
+  }
+  .metrics-content-wrap .performance {
+    width: 100%;
+    max-width: 400px;
+    float: none;
+    margin: 0 auto 30px auto;
+  }
+  .metrics-content-wrap .isp-operators {
+    width: 100%;
+    max-width: 400px;
+    float: none;
+    margin: 0 auto;
+  }
+  .metrics-content-wrap .downstream-growth-title,
+  .metrics-content-wrap .upstream-growth-title,
+  .metrics-content-wrap .performance-title,
+  .metrics-content-wrap .isp-title {
+    font-size: 1.5rem;
+  }
+  .metrics-content-wrap .state-filter {
+    margin-bottom: 30px;
+  }
+}
