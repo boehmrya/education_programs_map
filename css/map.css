@@ -65,8 +65,8 @@ h2.map-section-title {
 
 .map-content-wrap .isp-operators .provider {
   margin-bottom: 12px;
+  margin-left: 20px;
   display: list-item;
-  list-style-position: inside;
 }
 
 .map-content-wrap .isp-operators .provider a {
@@ -74,7 +74,7 @@ h2.map-section-title {
   text-decoration: none;
   color: #343F49;
   font-size: 1.125rem;
-  line-height: 1.25rem;
+  line-height: 1.5625rem;
 }
 
 .map-content-wrap .isp-operators .provider a:hover {
