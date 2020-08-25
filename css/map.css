@@ -29,10 +29,6 @@ h2.map-section-title {
 }
 
 .map-content-wrap::after,
-.map-content-wrap .downstream-growth::after,
-.map-content-wrap .upstream-growth::after,
-.map-content-wrap .performance .bars::after,
-.map-content-wrap .performance .figures-legend .legend-row::after,
 .map-content-wrap .isp-operators #isp-operator-names::after,
 #small-states .small-state::after {
   content: "";
@@ -59,29 +55,6 @@ h2.map-section-title {
   margin-bottom: 20px;
 }
 
-.map-content-wrap .downstream-growth,
-.map-content-wrap .upstream-growth,
-.map-content-wrap .performance {
-  margin-bottom: 20px;
-}
-
-.map-content-wrap .downstream-growth .overall,
-.map-content-wrap .upstream-growth .overall {
-  margin-right: 2%;
-}
-
-.map-content-wrap .downstream-growth .overall,
-.map-content-wrap .upstream-growth .overall,
-.map-content-wrap .downstream-growth .past-week,
-.map-content-wrap .upstream-growth .past-week {
-  float: left;
-  /*width: 50%;*/
-  width: 49%;
-}
-
-.map-content-wrap .downstream-growth-title,
-.map-content-wrap .upstream-growth-title,
-.map-content-wrap .performance-title,
 .map-content-wrap .isp-title {
   color: #343F49;
   font-size: 1.5rem;
@@ -90,131 +63,6 @@ h2.map-section-title {
   border-bottom: 1px solid #343F49;
 }
 
-.map-content-wrap .downstream-growth-title .small,
-.map-content-wrap .upstream-growth-title .small,
-.map-content-wrap .performance-title .small {
-  font-size: 1rem;
-}
-
-.map-content-wrap .downstream-growth .figure .num,
-.map-content-wrap .upstream-growth .figure .num {
-  /*font-size: 2.5rem;
-  line-height: 2rem;
-  font-weight: bold;*/
-  font-size: 2rem;
-  line-height: 2rem;
-  font-weight: bold;
-  letter-spacing: -0.0125rem;
-}
-
-@media all and (min-width: 992px) and (max-width: 1199px) {
-  .map-content-wrap .downstream-growth .figure .num,
-  .map-content-wrap .upstream-growth .figure .num {
-    font-size: 1.75rem;
-    line-height: 1.75rem;
-  }
-}
-
-.map-content-wrap .downstream-growth .figure .percent,
-.map-content-wrap .upstream-growth .figure .percent {
-  vertical-align: top;
-  /*font-size: 1.25rem;*/
-  font-weight: bold;
-  letter-spacing: -0.0125rem;
-  font-size: 1rem;
-}
-
-.map-content-wrap .data-col .overall .figure {
-  color: #8c489a;
-  float: left;
-  margin-right: 10px;
-}
-
-.map-content-wrap .data-col .past-week .figure {
-  color: #5ac9e7;
-  float: left;
-  margin-right: 10px;
-}
-
-.map-content-wrap .data-col .overall .metric-label,
-.map-content-wrap .data-col .past-week .metric-label  {
-  text-transform: uppercase;
-  color: #343F49;
-  font-size: 0.9rem !important;
-  line-height: 1.1rem !important;
-}
-
-.map-content-wrap .performance .bars {
-  height: 35px;
-  width: 250px;
-  margin-bottom: 15px;
-}
-
-.map-content-wrap .performance .bars .bar {
-  height: 35px;
-  float: left;
-}
-
-.map-content-wrap .performance .bars #bar-normal {
-  background: #00AC92;
-}
-
-.map-content-wrap .performance .bars #bar-elevated {
-  background: #FED241;
-}
-
-.map-content-wrap .performance .bars #bar-substantially-elevated {
-  background: #ed6660;
-}
-
-.map-content-wrap .performance .bars #bar-severely-elevated {
-  background: #e71b4f;
-}
-
-.map-content-wrap .performance .figures-legend .legend-row {
-  margin-bottom: 10px;
-  line-height: 1.1rem;
-}
-
-.map-content-wrap .performance .figures-legend .figure,
-.map-content-wrap .performance .figures-legend .legend-label {
-  font-size: 1rem !important;
-}
-
-.map-content-wrap .performance .figures-legend .figure,
-.map-content-wrap .performance .figures-legend .key,
-.map-content-wrap .performance .figures-legend .legend-label {
-  float: left;
-  margin-right: 8px;
-}
-
-.map-content-wrap .performance .figures-legend .figure {
-  font-weight: bold;
-  width: 35px;
-  text-align: center;
-  margin-right: 15px;
-}
-
-.map-content-wrap .performance .figures-legend .key {
-  width: 15px;
-  height: 15px;
-}
-
-.map-content-wrap .performance .figures-legend .key.green {
-  background: #00AC92;
-}
-
-.map-content-wrap .performance .figures-legend .key.yellow {
-  background: #FED241;
-}
-
-.map-content-wrap .performance .figures-legend .key.orange {
-  background: #ed6660;
-}
-
-.map-content-wrap .performance .figures-legend .key.red {
-  background: #e71b4f;
-}
 
 .map-content-wrap .isp-operators {
   min-height: 120px;
@@ -241,9 +89,9 @@ h2.map-section-title {
 .map-content-wrap #small-states {
   clear: both;
   position: absolute;
-  right: -15px;
+  right: -20px;
   width: 60px;
-  bottom: 100px;
+  bottom: 50px;
 }
 
 .map-content-wrap #small-states .small-state {
@@ -267,95 +115,6 @@ h2.map-section-title {
   font-size: 1.125rem;
   line-height: 1.35rem;
 }
-
-.map-wrap .bottom-notes-sources .notes,
-.map-wrap .bottom-notes-sources .sources {
-  padding: 20px 0px;
-  border-bottom: 1px solid #343F49;
-}
-
-.map-wrap .bottom-notes-sources .notes .notes-description,
-.map-wrap .bottom-notes-sources .sources .sources-description  {
-  display: block;
-}
-
-.map-wrap .bottom-notes-sources .notes .notes-title,
-.map-wrap .bottom-notes-sources .sources .sources-title {
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  position: relative;
-  font-size: 1rem !important;
-  line-height: 1.1rem !important;
-}
-
-.map-wrap .bottom-notes-sources .notes .notes-title .arrow,
-.map-wrap .bottom-notes-sources .sources .sources-title .arrow {
-  height: 26px;
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  width: 20px;
-}
-
-.map-wrap .bottom-notes-sources .notes .notes-description div {
-  padding-bottom: 5px;
-  font-size: 1rem !important;
-  line-height: 1.1rem !important;
-}
-
-.map-wrap .bottom-notes-sources .sources .sources-description {
-  font-size: 1rem !important;
-  line-height: initial;
-}
-
-.map-wrap .bottom-notes-sources .notes .notes-description,
-.map-wrap .bottom-notes-sources .sources .sources-description {
-  padding-top: 10px;
-}
-
-.map-wrap .bottom-notes-sources .notes .notes-description .green {
-  color: #00AC92;
-}
-
-.map-wrap .bottom-notes-sources .notes .notes-description .yellow {
-  color: #FED241;
-}
-
-.map-wrap .bottom-notes-sources .notes .notes-description .orange {
-  color: #ed6660;
-}
-
-.map-wrap .bottom-notes-sources .notes .notes-description .red {
-  color: #e71b4f;
-}
-
-.map-wrap .bottom-notes-sources .notes .notes-title .arrow b,
-.map-wrap .bottom-notes-sources .sources .sources-title .arrow b {
-  border-style: initial;
-  border-width: initial;
-  border-color: initial;
-  margin-left: 0;
-  margin-top: 0;
-  left: initial;
-  right: 10px;
-  position: absolute;
-  border-bottom: 3px solid #343F49;
-  border-right: 3px solid #343F49;
-  transform-origin: 66% 66%;
-  transform: rotate(45deg);
-  transition: all .15s ease-in-out;
-  height: 10px;
-  width: 10px;
-}
-
-.map-wrap .bottom-notes-sources .notes.active .notes-title .arrow b,
-.map-wrap .bottom-notes-sources .sources.active .sources-title .arrow b {
-  transform: rotate(225deg);
-}
-
-
-
 
 .map-content-wrap .select2-container--default .select2-selection--single {
   height: 48px;
@@ -436,14 +195,6 @@ h2.map-section-title {
     background-color: #d8d8d8!important;
     color: #343F49;
 }
-
-@media all and (min-width: 992px) and (max-width: 1199px) {
-  .map-content-wrap .downstream-growth-title .small,
-  .map-content-wrap .upstream-growth-title .small,
-  .map-content-wrap .performance-title .small {
-    font-size: 0.8rem;
-  }
-}
 @media all and (max-width: 1199px) {
   .map-content-wrap #state-map {
     width: 614px;
@@ -455,12 +206,6 @@ h2.map-section-title {
   .map-content-wrap #small-states {
     bottom: 160px;
   }
-  .map-content-wrap .performance .figures-legend .legend-label {
-    max-width: 180px;
-  }
-  .map-content-wrap .downstream-growth-title,
-  .map-content-wrap .upstream-growth-title,
-  .map-content-wrap .performance-title,
   .map-content-wrap .isp-title {
     font-size: 1.35rem;
   }
@@ -498,21 +243,6 @@ h2.map-section-title {
   .map-content-wrap .select2-container--default {
     max-width: 50%;
   }
-  .downstream-growth {
-    width: 48%;
-    float: left;
-    margin-right: 4%;
-  }
-  .upstream-growth {
-    width: 48%;
-    float: left;
-  }
-  .map-content-wrap .performance {
-    clear: left;
-    width: 48%;
-    float: left;
-    margin-right: 4%;
-  }
   .map-content-wrap .isp-operators {
     float: left;
     width: 48%;
@@ -525,33 +255,12 @@ h2.map-section-title {
   .map-content-wrap .select2-container--default {
     max-width: 100%;
   }
-  .downstream-growth {
-    width: 100%;
-    max-width: 400px;
-    float: none;
-    margin: 0 auto 30px auto;
-  }
-  .upstream-growth {
-    width: 100%;
-    max-width: 400px;
-    float: none;
-    margin: 0 auto 30px auto;
-  }
-  .map-content-wrap .performance {
-    width: 100%;
-    max-width: 400px;
-    float: none;
-    margin: 0 auto 30px auto;
-  }
   .map-content-wrap .isp-operators {
     width: 100%;
     max-width: 400px;
     float: none;
     margin: 0 auto;
   }
-  .map-content-wrap .downstream-growth-title,
-  .map-content-wrap .upstream-growth-title,
-  .map-content-wrap .performance-title,
   .map-content-wrap .isp-title {
     font-size: 1.5rem;
   }
