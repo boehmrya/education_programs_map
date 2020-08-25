@@ -73,7 +73,7 @@ jQuery(function($){
 
   w = $(window).width();
   //Width and height of map
-  width = parseInt(d3.select('#broadband-metrics-map').style('width'));
+  width = parseInt(d3.select('#state-map').style('width'));
   mapRatio = .71
   height = width * mapRatio;
 
@@ -95,7 +95,7 @@ jQuery(function($){
 
 
   //Create SVG element and append map to the SVG
-  var svg = d3.select("#broadband-metrics-map")
+  var svg = d3.select("#state-map")
   			.append("svg")
   			.attr("width", width)
   			.attr("height", height);
@@ -133,7 +133,7 @@ jQuery(function($){
         d3.select(this).style('fill', 'rgb(140, 72, 154)'); // fill current clicked state with blue
 
         // clear colors on all existing small boxes
-        $('#broadband-metrics-small-states .small-state .box').css('background', '#343F49');
+        $('#small-states .small-state .box').css('background', '#343F49');
 
         // check if it is a small state
         // if so, find the box and make it purple
@@ -154,7 +154,7 @@ jQuery(function($){
     $("#filterFormStateSelect").change(function() {
       $("#filterFormStateSelect option:selected").each(function(){
         var selected = $(this).val();
-        var selected_elem = '#broadband-metrics-map svg #' + selected;
+        var selected_elem = '#state-map svg #' + selected;
 
         // update the map
         d3.selectAll('path').classed('active', false); // remove active classes
@@ -163,7 +163,7 @@ jQuery(function($){
         d3.select(selected_elem).style('fill', 'rgb(140, 72, 154)'); // fill current clicked state with blue
 
         // clear colors on all existing small boxes
-        $('#broadband-metrics-small-states .small-state .box').css('background', '#343F49');
+        $('#small-states .small-state .box').css('background', '#343F49');
 
         // check if it is a small state
         // if so, find the box and make it purple
@@ -182,46 +182,6 @@ jQuery(function($){
     function updateData(state_id) {
       // get location from dict
       var state = data_states_metrics[state_id];
-
-      // upstream and downstream growth variables
-      var downstream_growth_overall = state.downstream_growth.overall;
-      var downstream_growth_past_week = state.downstream_growth.past_week;
-      var upstream_growth_overall = state.upstream_growth.overall;
-      var upstream_growth_past_week = state.upstream_growth.past_week;
-
-      // network performance variables
-      var performance_normal = state.network_performance.normal;
-      var performance_elevated = state.network_performance.elevated;
-      var performance_substantially_elevated = state.network_performance.substantially_elevated;
-      var performance_severely_elevated = state.network_performance.severely_elevated;
-
-      // update upstream and downstream data points
-      $("#downstream-growth-overall").text(downstream_growth_overall.toFixed(1));
-      $("#downstream-growth-past-week").text(downstream_growth_past_week.toFixed(1));
-      $("#upstream-growth-overall").text(upstream_growth_overall.toFixed(1));
-      $("#upstream-growth-past-week").text(upstream_growth_past_week.toFixed(1));
-
-      // update performance data points
-      $("#performance-normal").text(performance_normal.toFixed(1));
-      $("#performance-elevated").text(performance_elevated.toFixed(1));
-      $("#performance-substantially-elevated").text(performance_substantially_elevated.toFixed(1));
-      $("#performance-severely-elevated").text(performance_severely_elevated.toFixed(1));
-
-      // quick check to see if rounded percentages go over 100
-      var network_performance_total = performance_normal + performance_elevated + performance_substantially_elevated + performance_severely_elevated;
-      if (network_performance_total > 100) {
-        performance_normal = performance_normal - 0.05;
-        performance_elevated = performance_elevated - 0.05;
-        performance_substantially_elevated = performance_substantially_elevated  - 0.05;
-        performance_severely_elevated = performance_severely_elevated - 0.05;
-      }
-
-      // add style percentage widths to performance bar
-      $("#bar-normal").css("width", parseFloat(performance_normal).toFixed(2) + '%');
-      $("#bar-elevated").css("width", parseFloat(performance_elevated).toFixed(2) + '%');
-      $("#bar-substantially-elevated").css("width", parseFloat(performance_substantially_elevated).toFixed(2) + '%');
-      $("#bar-severely-elevated").css("width", parseFloat(performance_severely_elevated).toFixed(2) + '%');
-
 
       // fill in cale isps with name and link
       // first, empty out the block
@@ -248,9 +208,9 @@ jQuery(function($){
     $('#filterFormStateSelect').select2();
 
     // trigger events when small boxes are clicked
-    $('#broadband-metrics-small-states .small-state .box').on('click', function() {
+    $('#small-states .small-state .box').on('click', function() {
       // clear colors on all existing small boxes
-      $('#broadband-metrics-small-states .small-state .box').css('background', '#343F49');
+      $('#small-states .small-state .box').css('background', '#343F49');
 
       // make background of this small box purple
       $(this).css('background', '#8c489a');
@@ -265,14 +225,14 @@ jQuery(function($){
     });
 
     // accordion toggle
-    $('.metrics-wrap .bottom-notes-sources .notes .notes-title').on('click', function () {
+    $('.map-wrap .bottom-notes-sources .notes .notes-title').on('click', function () {
         $(this).parents('.notes').toggleClass('active');
         $(this).toggleClass('active');
         $(this).next().slideToggle();
     });
 
     // collapsible item toggle
-    $('.metrics-wrap .bottom-notes-sources .sources .sources-title').on('click', function () {
+    $('.map-wrap .bottom-notes-sources .sources .sources-title').on('click', function () {
         $(this).parents('.sources').toggleClass('active');
         $(this).toggleClass('active');
         $(this).next().slideToggle();
