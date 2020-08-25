@@ -118,7 +118,7 @@ jQuery(function($){
       .style("fill", "rgb(52, 63, 73)")
       .on('mouseover', function(d, i) {
         if (!d3.select(this).classed('active')) {
-          d3.select(this).style('fill', 'rgb(140, 72, 154)'); // change to blue on hover
+          d3.select(this).style('fill', 'rgb(255, 202, 54)'); // change to blue on hover
         }
       })
       .on('mouseout', function(d, i) {
@@ -130,7 +130,7 @@ jQuery(function($){
         d3.selectAll('path').classed('active', false); // remove active classes
         d3.selectAll('path').style({ 'fill': 'rgb(52, 63, 73)' }); // clear all colors
         d3.select(this).attr('class', 'active'); // add active class to current element
-        d3.select(this).style('fill', 'rgb(140, 72, 154)'); // fill current clicked state with blue
+        d3.select(this).style('fill', 'rgb(255, 202, 54)'); // fill current clicked state with blue
 
         // clear colors on all existing small boxes
         $('#small-states .small-state .box').css('background', '#343F49');
@@ -139,7 +139,7 @@ jQuery(function($){
         // if so, find the box and make it purple
         if (small_states.hasOwnProperty(state_id[d.id])) {
           var state_box_id = '#' + state_id[d.id] + '-Box';
-          $(state_box_id).css('background', '#8c489a');
+          $(state_box_id).css('background', '#ffca36');
         }
 
         // update the select list to the chosen state
@@ -160,7 +160,7 @@ jQuery(function($){
         d3.selectAll('path').classed('active', false); // remove active classes
         d3.selectAll('path').style({ 'fill': 'rgb(52, 63, 73)' }); // clear all colors
         d3.select(selected_elem).attr('class', 'active'); // add active class to current element
-        d3.select(selected_elem).style('fill', 'rgb(140, 72, 154)'); // fill current clicked state with blue
+        d3.select(selected_elem).style('fill', 'rgb(255, 202, 54)'); // fill current clicked state with blue
 
         // clear colors on all existing small boxes
         $('#small-states .small-state .box').css('background', '#343F49');
@@ -169,7 +169,7 @@ jQuery(function($){
         // if so, find the box and make it purple
         if (small_states.hasOwnProperty(selected)) {
           var state_box_id = '#' + selected + '-Box';
-          $(state_box_id).css('background', '#8c489a');
+          $(state_box_id).css('background', '#ffca36');
         }
 
         // update data in sidebar
@@ -213,7 +213,7 @@ jQuery(function($){
       $('#small-states .small-state .box').css('background', '#343F49');
 
       // make background of this small box purple
-      $(this).css('background', '#8c489a');
+      $(this).css('background', '#ffca36');
 
       // split the id on the box to get the state abbreviation
       var box_id = $(this).attr('id');
@@ -224,21 +224,6 @@ jQuery(function($){
       $("#filterFormStateSelect").val(box_state).trigger('change');
     });
 
-    // accordion toggle
-    $('.map-wrap .bottom-notes-sources .notes .notes-title').on('click', function () {
-        $(this).parents('.notes').toggleClass('active');
-        $(this).toggleClass('active');
-        $(this).next().slideToggle();
-    });
-
-    // collapsible item toggle
-    $('.map-wrap .bottom-notes-sources .sources .sources-title').on('click', function () {
-        $(this).parents('.sources').toggleClass('active');
-        $(this).toggleClass('active');
-        $(this).next().slideToggle();
-    });
-
     updateData('US');
-
 
   });

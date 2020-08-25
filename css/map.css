@@ -41,18 +41,18 @@ h2.map-section-title {
 }
 
 .map-content-wrap .data-col {
-  width: 330px;
+  width: 280px;
   margin-right: 70px;
   float: left;
 }
 
 .map-content-wrap #state-map {
-  width: 740px;
+  width: 790px;
   float: left;
 }
 
 .map-content-wrap .state-filter {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .map-content-wrap .isp-title {
@@ -63,22 +63,17 @@ h2.map-section-title {
   border-bottom: 1px solid #343F49;
 }
 
-
-.map-content-wrap .isp-operators {
-  min-height: 120px;
-}
-
 .map-content-wrap .isp-operators .provider {
-  float: left;
-  margin-right: 15px;
-  margin-bottom: 7px;
+  margin-bottom: 12px;
+  display: list-item;
+  list-style-position: inside;
 }
 
 .map-content-wrap .isp-operators .provider a {
   text-transform: uppercase;
   text-decoration: none;
   color: #343F49;
-  font-size: 1rem !important;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 
@@ -108,7 +103,7 @@ h2.map-section-title {
 }
 
 .map-content-wrap #small-states .small-state .box:hover {
-  background: #8c489a !important;
+  background: #ffca36 !important;
 }
 
 .map-content-wrap #small-states .small-state .box-text {
@@ -150,7 +145,7 @@ h2.map-section-title {
 }
 
 .map-content-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: #8c489a;
+    color: #343F49;
     padding-top: 8px;
     padding-left: 25px;
     padding-right: 40px;
@@ -165,8 +160,8 @@ h2.map-section-title {
     left: auto;
     right: 25px;
     position: absolute;
-    border-bottom: 3px solid #8c489a !important;
-    border-right: 3px solid #8c489a !important;
+    border-bottom: 3px solid #343F49 !important;
+    border-right: 3px solid #343F49 !important;
     transform-origin: 66% 66%;
     transform: rotate(45deg);
     transition: all .15s ease-in-out;
