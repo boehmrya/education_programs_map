@@ -10,7 +10,7 @@
 
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/select2.min.css" rel="stylesheet">
-  <link href="css/broadband_metrics.css" rel="stylesheet">
+  <link href="css/map.css" rel="stylesheet">
 
   <script src="https://use.typekit.net/mhj7sfh.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -22,7 +22,7 @@
   <div class="metrics-wrap">
     <div class="metrics-header">
       <h2 class="metrics-section-title" style="margin-top: 0px;">Covid-19: How Cable's Internet Networks Are Performing</h2>
-      <div class="metrics-filter-instructions">Select your state to display network information.</div>
+      <div class="metrics-filter-instructions">Select your state to display program information.</div>
     </div>
     <div class="metrics-content-wrap">
       <div class="data-col">
@@ -85,93 +85,10 @@
           </form>
         </div>
 
-        <div class="downstream-growth">
-          <div class="downstream-growth-title">Downstream Growth <span class="small">(% of usage)</span></div>
-          <div class="overall">
-            <div class="figure">
-              <span id="downstream-growth-overall" class="num">15</span>
-              <span class="percent">%</span>
-            </div>
-            <div class="metric-label">
-              Overall<br>
-              Since 3/1
-            </div>
-          </div>
-          <div class="past-week">
-            <div class="figure">
-              <span id="downstream-growth-past-week" class="num">20</span>
-              <span class="percent">%</span>
-            </div>
-            <div class="metric-label">Weekly <br>4/4 - 4/11</div>
-          </div>
-        </div>
-
-        <div class="upstream-growth">
-          <div class="upstream-growth-title">Upstream Growth <span class="small">(% of usage)</span></div>
-          <div class="overall">
-            <div class="figure">
-              <span id="upstream-growth-overall" class="num">23</span>
-              <span class="percent">%</span>
-            </div>
-            <div class="metric-label">Overall <br>Since 3/1</div>
-          </div>
-          <div class="past-week">
-            <div class="figure">
-              <span id="upstream-growth-past-week" class="num">30</span>
-              <span class="percent">%</span>
-            </div>
-            <div class="metric-label">Weekly <br>4/4 - 4/11</div>
-          </div>
-        </div>
-
-        <div class="performance">
-          <div class="performance-title">Network Performance <span class="small">(% of network)</span></div>
-          <div class="bars">
-            <div id="bar-normal" class="bar"></div>
-            <div id="bar-elevated" class="bar"></div>
-            <div id="bar-substantially-elevated" class="bar"></div>
-            <div id="bar-severely-elevated" class="bar"></div>
-          </div>
-          <div class="figures-legend">
-            <div class="legend-row one">
-              <div class="figure">
-                <span id="performance-normal" class="num">88</span><span class="percent">%</span>
-              </div>
-              <div class="key green"></div>
-              <div class="legend-label">Normal Peak Usage</div>
-            </div>
-
-            <div class="legend-row two">
-              <div class="figure">
-                <span id="performance-elevated" class="num">20</span><span class="percent">%</span>
-              </div>
-              <div class="key yellow"></div>
-              <div class="legend-label">Elevated Peak Usage</div>
-            </div>
-
-            <div class="legend-row three">
-              <div class="figure">
-                <span id="performance-substantially-elevated" class="num">10</span><span class="percent">%</span>
-              </div>
-              <div class="key orange"></div>
-              <div class="legend-label">Substantially Elevated Peak Usage</div>
-            </div>
-
-            <div class="legend-row four">
-              <div class="figure">
-                <span id="performance-severely-elevated" class="num">0</span><span class="percent">%</span>
-              </div>
-              <div class="key red"></div>
-              <div class="legend-label">Significantly Elevated Peak Usage</div>
-            </div>
-          </div>
-        </div>
-
         <div class="isp-operators">
           <div class="isp-title">Internet Service Providers</div>
           <div id="isp-operator-names"></div>
         </div>
-
 
       </div>
       <div id="broadband-metrics-map" class="map"></div>
@@ -215,21 +132,6 @@
       </div>
     </div>
 
-    <div class="bottom-notes-sources">
-      <div class="notes active">
-        <div class="notes-title active">Notes <span class="arrow"><b role="presentation"></b></span></div>
-        <div class="notes-description">
-          <div class="normal-description"><span class="green">Normal Peak Usage:</span> Access network at peak hour showing excess capacity available; no material impact on customer experience.</div>
-          <div class="elevated-description"><span class="yellow">Elevated Peak Usage:</span> Access network at peak hour showing ample capacity available; no material impact on customer experience.</div>
-          <div class="substantially-evevated-description"><span class="orange">Substantially Elevated Peak Usage:</span> Access network at peak hour showing reduced capacity available; minor impact on performance and customer experience possible during peak.</div>
-          <div class="severely-damaged-description"><span class="red">Significantly Elevated Peak Usage:</span> Access network at peak hour showing significantly elevated usage; some customers may be temporarily affected during peak, including reduced speeds.</div>
-        </div>
-      </div>
-      <div class="sources active">
-        <div class="sources-title active">Sources<span class="arrow"><b role="presentation"></b></span></div>
-        <div class="sources-description">Data from NCTA Member Companies and Others</div>
-      </div>
-    </div>
   </div>
 
   <script>
@@ -1917,7 +1819,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/select2.min.js"></script>
   <script src="js/d3.v3.min.js"></script>
-  <script src="js/broadband_metrics.js"></script>
+  <script src="js/map.js"></script>
 
 </body>
 
